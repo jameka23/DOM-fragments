@@ -7,78 +7,51 @@ The document.appendChild() method will take a virtual DOM element you created an
 */
 
 
-// 2. In your JavaScript, use querySelector() to obtain a reference to that article DOM element.
-const articleMessages = document.querySelector(".messages") // article tag
+const articleMessages = document.querySelector(".messages") 
+const frag = document.createDocumentFragment()
 
-// 3. Create five (5) section components, each with a class of message, and with the content of your choosing.
-// const msg = ["Hi, Tay", "What's going on tonight?", "We're all rewatching Game of Thrones at my place.", "Sweet! I'll bring some drinks. Ya'll need anything else?", "Nah, we're pretty straight on the food game. THNX."]
 
-const sectComp1 = () => {
-    let section = document.createElement("section")
-    section.classList.add("message")
-    const msg = "Hi, Tay"
-    section.textContent = msg
-    
-    // 4. Using appendChild(), attach each message as a child \
-    articleMessages.appendChild(section)
-    // console.log('hi', section)
 
-    return section
-}
+// section 1
+const sect1 = document.createElement("section")
+sect1.classList.add("message")
+const msg = "Hi, Tay"
+sect1.textContent = msg
+frag.appendChild(section)
 
-const sectComp2 = () => {
-    let section = document.createElement("section")
-    section.classList.add("message")
-    const msg = "What's going on tonight?"
-    section.textContent = msg
-    
-    // 4. Using appendChild(), attach each message as a child \
-    articleMessages.appendChild(section)
-    // console.log('hi', section)
+// section 2
+const sect2 = document.createElement("section")
+sect2.classList.add("message")
+const msg = "What's going on tonight?"
+sect2.textContent = msg
+articleMessages.appendChild(section)
 
-    return section
-}
+// section 3 
+const sect3 = document.createElement("section")
+sect3.classList.add("message")
+const msg = "We're all rewatching Game of Thrones at my place."
+sect3.textContent = msg
+frag.appendChild(section)
 
-const sectComp3 = () => {
-    let section = document.createElement("section")
-    section.classList.add("message")
-    const msg = "We're all rewatching Game of Thrones at my place."
-    section.textContent = msg
-    
-    // 4. Using appendChild(), attach each message as a child \
-    articleMessages.appendChild(section)
-    // console.log('hi', section)
+// section 4
+const sect4 = document.createElement("section")
+sect4.classList.add("message")
+const msg = "Sweet! I'll bring some drinks. Ya'll need anything else?"
+sect4.textContent = msg
+frag.appendChild(section)
 
-    return section
-}
+// section 5
+const sect5 = document.createElement("section")
+sect5.classList.add("message")
+const msg = "Nah, we're pretty straight on the food game. THNX."
+sect5.textContent = msg
+frag.appendChild(section)
 
-const sectComp4 = () => {
-    let section = document.createElement("section")
-    section.classList.add("message")
-    const msg = "Sweet! I'll bring some drinks. Ya'll need anything else?"
-    section.textContent = msg
-    
-    // 4. Using appendChild(), attach each message as a child \
-    articleMessages.appendChild(section)
-    // console.log('hi', section)
 
-    return section
-}
+articleMessages.appendChild(frag)
 
-const sectComp5 = () => {
-    let section = document.createElement("section")
-    section.classList.add("message")
-    const msg = "Nah, we're pretty straight on the food game. THNX."
-    section.textContent = msg
-    
-    // 4. Using appendChild(), attach each message as a child \
-    articleMessages.appendChild(section)
-    // console.log('hi', section)
-
-    return section
-}
-console.log(sectComp1())
-console.log(sectComp2())
-console.log(sectComp3())
-console.log(sectComp4())
-console.log(sectComp5())
+// console.log(sectComp1())
+// console.log(sectComp2())
+// console.log(sectComp3())
+// console.log(sectComp4())
+// console.log(sectComp5())
